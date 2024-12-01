@@ -111,18 +111,34 @@ body {
    min-width: 240px;   
 }
 
+.menu-bloco,
+.menu-login {
+    border-bottom: 1px solid rgba(0, 0 , 0, 0.1) ;
+    padding: 15px;
+}
+
+.menu-bloco:last-child {
+    border-bottom: none;
+}
+
 .bloco-item {
     display: flex;
-    background-color: #0000000d;
     border-radius: 12px;
     padding: 7px 20px;
     align-items: center;
     gap: 20px;
     color: inherit;
     text-decoration: none;
-    font-weight: 600;
+}
+
+.bloco-titulo {
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 3px 0;
 }
 
 .bloco-item.selecionado {
     background-color: #0000000d;
+    font-weight: 600;
 }
