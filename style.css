@@ -7,7 +7,7 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     color: #0f0f0f;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .img-thumb {
@@ -25,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 7px;
+    text-align:left;  
 }
 
 .caixa-titulo {
@@ -32,10 +33,17 @@ body {
     text-decoration: none;
     font-size: 16px;
     color: inherit;
+    max-width: 300px;
 }
 
 .caixa-texto {
     color: #606060;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    max-width: max-content;
+
 }
 
 .caixa-texto a {
@@ -59,7 +67,8 @@ body {
 }
 
 .caixa-video {
-    width: 380px;
+    width: 32%;
+    margin-bottom: 50px;
 }
 
 .caixa-aovivo {
@@ -82,18 +91,26 @@ body {
 }
 
 .categorias {
+    margin-top: 15px;
     display: flex;
     gap: 8px;
 }
 .categoria {
     font-size: inherit;
     font-family: inherit;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 7px 12px;
     border: none;
     font-weight: 500;
     background-color: #0000000d;
     cursor: pointer;
+    transition: background-color 5ms ease;
+}
+
+.categoria:hover,
+.icone-microfone:hover,
+.icone-lupa:hover {
+    background-color: rgba(0, 0 , 0, 0.1);
 }
 
 .categoria.selecionado {
@@ -108,7 +125,8 @@ body {
 }
 
 .menu-lateral {
-   min-width: 240px;   
+    width: 240px;
+    min-width: 240px;   
 }
 
 .menu-bloco,
@@ -129,6 +147,22 @@ body {
     gap: 20px;
     color: inherit;
     text-decoration: none;
+    transition: background-color .2ms ease;
+}
+
+.bloco-item.selecionado {
+    font-weight: 600;
+}
+
+
+.bloco-item:hover,
+.bloco-item.selecionado {
+    background-color: #0000000d;
+
+}
+
+.bloco-item.selecionado:hover {
+    background-color: rgba(0, 0 , 0, 0.2);
 }
 
 .bloco-titulo {
@@ -138,7 +172,95 @@ body {
     padding: 3px 0;
 }
 
-.bloco-item.selecionado {
+.menu-login {
+    padding: 16px 32px;
+}
+
+.login-texto {
+    margin-bottom: 15px;
+
+}
+
+.login-bloco {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 6px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0 , 0, 0.1) ;
+    padding: 6px 12px;
+    color: #065fd4;
+    fill: #065fd4;
+    width: max-content;
+    transition: all .2ms ease;
+}
+
+.login-bloco:hover{
+    background-color: #def1ff;
+    border-color: 1px solid #def1ff;
+}
+
+.bloco-texto {
+    color: inherit;
+    font-weight: 600;   
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    padding: 7.5 15px;
+}
+
+.caixa-logo,
+.caixa-pesquisa,
+.caixa-login {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 10px;
+}
+
+.icone-logo {
+    height: 20px;
+    cursor: pointer;
+}
+
+.icone-menu {
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color .5ms ease;
+    cursor: pointer;
+}
+
+.icone-menu:hover {
     background-color: #0000000d;
-    font-weight: 600;
+}
+
+.input-pesquisa {
+    border-radius: 100px;
+    border: rgba(0, 0, 0, 0.25);
+    height: 40px;
+    width: 640px;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.icone-microfone,
+.icone-lupa {
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    background-color: #0000000d;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.caixa-pesquisa {
+    margin-left: 32px;
+}
+
+.caixa-logo {
+    margin-left: 7px;
 }
